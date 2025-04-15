@@ -7,8 +7,7 @@ patch(PosStore.prototype, {
         order = this.get_order(),
         printBillActionTriggered = false,
     } = {}) {
-        console.log('inherit printReceipt :V', order)
-        console.log('config', this.config)
+        console.log('inherit printReceipt()', order)
         console.log('URL print', this.config.epson_printer_ip)
         return true
     }
