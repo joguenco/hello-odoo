@@ -8,10 +8,10 @@
                 <div>Invoice Date: <t t-out="invoice.invoice_date" /></div>
             </t>
             <t t-set="partner" t-value="props.data.partner"/>
-            <t t-if="partner.name">
+            <t t-if="partner">
                 <div>Customer Info</div>
                 <div>Name: <t t-out="partner.name" /></div>
-                <div t-if="partner.address" t-esc="partner.address"/>
+                <div>Vat: <t t-out="partner.vat" /></div>
                 <div>Address: <t t-if="partner.contact_address" t-out="partner.contact_address"/></div>
                 <div>Email: <t t-if="partner.email" t-out="partner.email"/></div>
             </t>
