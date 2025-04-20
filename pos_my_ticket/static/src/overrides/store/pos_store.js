@@ -5,7 +5,7 @@
  */
 import { patch } from '@web/core/utils/patch'
 import { PosStore } from '@point_of_sale/app/store/pos_store'
-import { OrderReceipt } from '@point_of_sale/app/screens/receipt_screen/receipt/order_receipt'
+// import { OrderReceipt } from '@point_of_sale/app/screens/receipt_screen/receipt/order_receipt'
 
 patch(PosStore.prototype, {
   /**
@@ -17,8 +17,8 @@ patch(PosStore.prototype, {
     const result = super.getReceiptHeaderData(...arguments)
     result.invoice_id = order.get_invoice()
     return result
-  },
-
+  }
+/*
   async printReceipt ({
     basic = false,
     order = this.get_order(),
@@ -51,8 +51,10 @@ patch(PosStore.prototype, {
 
     return true
   }
+    */
 })
 
+/*
 function buildReceiptLines (order) {
   const lines = []
 
@@ -76,3 +78,4 @@ function buildReceiptLines (order) {
 
   return lines
 }
+*/

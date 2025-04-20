@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo POS Debugger",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8069/web?debug=assets",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "*": "${workspaceFolder}/*"
+            }
+        },
+        {
+            "name": "Python:Odoo",
+            "type": "debugpy",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${command:python.interpreterPath}",
+            "console": "integratedTerminal",
+            "program": "${workspaceFolder}/odoo-bin",
+            "args": [
+                "-c",
+                "${workspaceFolder}/odoo.conf",
+                "--dev=all"
+            ],
+            "cwd": "${workspaceFolder}",
+        }
+    ]
+}
